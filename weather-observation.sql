@@ -39,4 +39,98 @@ CITY LIKE 'O%' OR
 CITY LIKE 'U%' );
 
 
+-- Weather Observation Station 7
+-- ending with vowels
+SELECT DISTINCT CITY
+FROM STATION
+WHERE
+(CITY LIKE "%A" OR
+CITY LIKE "%E" OR
+CITY LIKE "%I" OR
+CITY LIKE "%O" OR
+CITY LIKE "%U");
+
+
+-- Weather Observation Station 8
+-- vowels (i.e., a, e, i, o, and u) as both their first and last characters.
+SELECT DISTINCT CITY
+FROM STATION
+WHERE
+(CITY LIKE "a%" OR
+CITY LIKE "e%" OR
+CITY LIKE "i%" OR
+CITY LIKE "o%" OR
+CITY LIKE "u%") 
+AND
+(CITY LIKE "%a" OR
+CITY LIKE "%e" OR
+CITY LIKE "%i" OR
+CITY LIKE "%o" OR
+CITY LIKE "%u" );
+
+
+
+-- Weather Observation Station 9
+-- do not start with vowels. 
+SELECT DISTINCT CITY
+FROM STATION
+WHERE NOT
+(CITY LIKE "A%" OR
+CITY LIKE "E%" OR
+CITY LIKE "I%" OR
+CITY LIKE "O%" OR
+CITY LIKE "U%" );
+
+
+-- Weather Observation Station 10
+-- do not end with vowels.
+SELECT DISTINCT CITY
+FROM STATION
+WHERE NOT
+(CITY LIKE "%A" OR
+CITY LIKE "%E" OR
+CITY LIKE "%I" OR
+CITY LIKE "%O" OR
+CITY LIKE "%U" )
+
+
+-- Weather Observation Station 11
+-- either do not start with vowels or do not end with vowels. 
+SELECT DISTINCT CITY
+FROM STATION
+WHERE NOT
+((CITY LIKE "a%" OR
+CITY LIKE "e%" OR
+CITY LIKE "i%" OR
+CITY LIKE "o%" OR
+CITY LIKE "u%")
+AND
+(CITY LIKE "%a" OR
+CITY LIKE "%e" OR
+CITY LIKE "%i" OR
+CITY LIKE "%o" OR
+CITY LIKE "%u"));
+
+
+
+-- Weather Observation Station 12
+-- do not start with vowels and do not end with vowels.
+SELECT DISTINCT CITY 
+FROM STATION
+WHERE NOT
+(
+(CITY LIKE "A%" OR
+CITY LIKE "E%" OR
+CITY LIKE "I%" OR
+CITY LIKE "O%" OR
+CITY LIKE "U%" )
+OR
+(CITY LIKE "%A" OR
+CITY LIKE "%E" OR
+CITY LIKE "%I" OR
+CITY LIKE "%O" OR
+CITY LIKE "%U" ));
+
+
+
 
