@@ -133,4 +133,10 @@ CITY LIKE "%U" ));
 
 
 
+-- Weather Observation Station 16
+-- smallest Northern Latitude (LAT_N) from STATION that is greater than . Round your answer to  decimal places.
+
+
+
+
 
